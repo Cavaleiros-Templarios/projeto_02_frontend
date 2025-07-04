@@ -1,68 +1,38 @@
+@import "tailwindcss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* === CORES PRINCIPAIS === */
+  --cor-primaria: #015B46; /* Verde - usada em botões, destaques e elementos interativos */
+  --cor-primaria-hover: #015B46; /* Versão mais escura para hover em botões e links */
+  --cor-primaria-fundo: #f3f4f6; /*  Cor para o background da página */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --cor-secundaria: #0F3057; /* Azul escuro (exemplo) - pode ser usada para fundo ou header */
+  --cor-secundaria-hover: #0a223e; /* Hover da cor secundária */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* === TEXTO === */
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --cor-texto-principal: #1f1f1f; /* Cor padrão para textos - quase preto */
+  --cor-texto-claro: #ffffff; /* Usada em textos sobre fundo escuro */
+  --cor-texto-secundario: #6b7280; /* Cinza - para textos auxiliares ou placeholders */
+
+  /* === FUNDOS === */
+
+  --cor-fundo-claro: #f9f9f9; /* Fundo geral da página */
+  --cor-fundo-escuro: #1a1a1a; /* Para rodapé ou seções destacadas */
+  --cor-fundo-card: #ffffff; /* Para cartões, boxes e containers */
+
+  /* === BORDAS E DIVISORES === */
+
+  --cor-borda: #dcdcdc; /* Cinza claro - usado em bordas e divisores */
+  --cor-sombra: rgba(0, 0, 0, 0.1); /* Sombra suave para elevação */
+
+  /* === FEEDBACK VISUAL === */
+
+  --cor-sucesso: #4CAF50; /* Verde - confirmações e ações bem-sucedidas */
+  --cor-erro: #f44336; /* Vermelho - mensagens de erro */
+  --cor-aviso: #FFC107; /* Amarelo - alertas e avisos */
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  background-color: var(--cor-primaria-fundo);
 }
