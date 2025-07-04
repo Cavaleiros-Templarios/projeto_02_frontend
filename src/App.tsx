@@ -1,10 +1,12 @@
-import { BrowserRouter, Form, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import './App.css'
 import Home from './pages/home/Home'
 import ListaColaboradores from './components/colaboradores/listacolaboradores/ListaColaboradores'
 import FormColaborador from './components/colaboradores/formcolaborador/FormColaborador'
+import ListaDepartamentos from './components/departamentos/listadepartamentos/ListaDepartamentos'
+import FormDepartamento from './components/departamentos/formdepartamentos/FormDepartamentos'
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
               <Route path="/colaboradores" element={<ListaColaboradores />} />
               <Route path="/editarcolaborador/:id" element={<FormColaborador />} />
               <Route path="/cadastrarcolaborador" element={<FormColaborador />} />
-              {/* <Route path="/departamentos" element={<ListarDepartamentos />} /> 
-              <Route path="/projetos" element={<ListarProjetos />} /> */}
+              <Route path="/departamentos" element={<ListaDepartamentos />} />
+              <Route path="/editardepartamento/:id" element={<FormDepartamento />} />
+              <Route path="/cadastrardepartamento" element={<FormDepartamento />} />
+              {/* <Route path="/projetos" element={<ListarProjetos />} /> */}
             </Routes>
           </div>
           <Footer />
