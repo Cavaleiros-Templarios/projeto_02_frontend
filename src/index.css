@@ -3,7 +3,7 @@
 :root {
   /* === CORES PRINCIPAIS === */
   --cor-primaria: #015B46; /* Verde - usada em botões, destaques e elementos interativos */
-  --cor-primaria-hover: #015B46; /* Versão mais escura para hover em botões e links */
+  --cor-primaria-hover: #003C2D; /* Versão mais escura para hover em botões e links */
   --cor-primaria-fundo: #f3f4f6; /*  Cor para o background da página */
 
   --cor-secundaria: #0F3057; /* Azul escuro (exemplo) - pode ser usada para fundo ou header */
