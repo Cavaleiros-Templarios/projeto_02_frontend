@@ -26,7 +26,7 @@ function FormColaborador() {
     }
 
     async function buscarDepartamentos() {
-        await buscar('/departamento/', setDepartamentos)
+        await buscar('/departamento', setDepartamentos)
     }
 
     useEffect(() => {

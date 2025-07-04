@@ -3,11 +3,12 @@ import CardColaboradores from "../cardcolaboradores/CardColaboradores";
 import { useState, useEffect } from "react";
 import { buscar } from "../../../services/Service";
 import { DNA } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
 function ListaColaboradores() {
-
+    const navigate = useNavigate(); 
+    
     const [isLoading, setIsLoading] = useState<boolean>(false)
-
     const [colaboradores, setColaboradores] = useState<Colaborador[]>([])
 
     async function buscarColaboradores() {
@@ -35,6 +36,14 @@ function ListaColaboradores() {
             )}
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col">
+                    
+                    <button
+                        className="mb-4 w-48 self-end bg-slate-700 text-white py-2 px-4 rounded hover:bg-slate-800"
+                        onClick={() => navigate("/cadastrarcolaborador")}
+                    >
+                        Cadastrar novo colaborador 
+                    </button>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {colaboradores.map((colaborador) => (
                             <CardColaboradores key={colaborador.id} colaborador={colaborador} />
