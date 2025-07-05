@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type Colaborador from '../../../models/Colaborador'
+import ModalCalculoSalario from '../../calculosalario/modalcalculosalario/ModalCalculoSalario'
 
 interface CardColaboradoresProps{
     colaborador: Colaborador
@@ -8,8 +9,11 @@ interface CardColaboradoresProps{
 function CardColaboradores({colaborador}: CardColaboradoresProps) {
     return (
         <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-slate-800 text-white font-bold text-2xl'>
-                Colaborador
+            <header className='flex items-center justify-between py-2 px-6 bg-slate-800 text-white font-bold text-2xl'>
+                <span>Colaborador</span>
+                <div>
+                    <ModalCalculoSalario id={colaborador.id!.toString()}/>
+                </div>
             </header>
             <p className='py-2 px-6 text-3xl bg-slate-200 h-full'>Nome: {colaborador.nomeColaborador}</p>
             <p className='py-2 px-6 text-3xl bg-slate-200 h-full'>Cargo: {colaborador.cargo}</p>

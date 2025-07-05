@@ -6,6 +6,7 @@ import Home from './pages/home/Home'
 import ListaColaboradores from './components/colaboradores/listacolaboradores/ListaColaboradores'
 import FormColaborador from './components/colaboradores/formcolaborador/FormColaborador'
 import DeletarColaborador from './components/colaboradores/deletarcolaborador/DeletarColaborador'
+// import FormCalculoSalario from './components/calculosalario/formcalculosalario/FormCalculoSalario'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/editarcolaborador/:id" element={<FormColaborador />} />
               <Route path="/cadastrarcolaborador" element={<FormColaborador />} />
               <Route path="/deletarcolaborador/:id" element={<DeletarColaborador />} />
+              {/* <Route path="/salario/:id" element={<FormCalculoSalario />} /> */}
               {/* <Route path="/departamentos" element={<ListarDepartamentos />} /> 
               <Route path="/projetos" element={<ListarProjetos />} /> */}
             </Routes>
