@@ -26,7 +26,7 @@ function Navbar() {
                 </div>
 
                 <div className="hidden md:flex items-center gap-4 md:gap-6 text-gray-900 font-medium">
-                    <Link to="/departamentos" className="hover:text-green-900 transition-colors duration-300">
+                    <Link to="/departamento" className="hover:text-green-900 transition-colors duration-300">
                         Departamentos
                     </Link>
                     <Link to="/colaboradores" className="hover:text-green-900 transition-colors duration-300">
