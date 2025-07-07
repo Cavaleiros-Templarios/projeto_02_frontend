@@ -9,7 +9,7 @@ import Sobre from './pages/sobre/Sobre'
 import ListaDepartamentos from './components/departamentos/listadepartamentos/ListaDepartamentos'
 import FormDepartamento from './components/departamentos/formdepartamentos/FormDepartamentos'
 import Estatisticas from './pages/estatitiscas/Estatisticas'
-import ListaColaboradores from './components/colaboradores/listacolaboradores/ListaColaboradores'
+import ListaColaboradores from './components/colaboradores/formcolaborador/listacolaboradores/ListaColaboradores'
 // import FormCalculoSalario from './components/calculosalario/formcalculosalario/FormCalculoSalario'
 
 function App() {

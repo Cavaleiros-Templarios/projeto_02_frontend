@@ -4,6 +4,7 @@ import type Colaborador from "../../../models/Colaborador"
 import { buscar, atualizar, cadastrar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
 import type Departamento from "../../../models/Departamento"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 function FormColaborador() {
 
@@ -59,17 +60,17 @@ function FormColaborador() {
         if(id !== undefined){
             try {
                 await atualizar(`/colaboradores`, colaborador, setColaborador)
-                alert("A Colaborador foi atualizado com sucesso!")
+                ToastAlerta("A Colaborador foi atualizado com sucesso!", "sucesso")
             } catch (error: any) {
-                alert("Erro ao atualizar o Colaborador!")
+                ToastAlerta("Erro ao atualizar o Colaborador!", "erro")
                 console.error(error)
             }
         } else {
             try {
                 await cadastrar(`/colaboradores`, colaborador, setColaborador)
-                alert("A Colaborador foi cadastrado com sucesso!")
+                ToastAlerta("A Colaborador foi cadastrado com sucesso!", "sucesso")
             } catch (error: any) {
-                alert("Erro ao cadastrar o Colaborador!")
+                ToastAlerta("Erro ao cadastrar o Colaborador!", "erro")
                 console.error(error)
                 }
             }
@@ -149,8 +150,8 @@ function FormColaborador() {
                     </select>
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-slate-700 cursor-pointer
-                               hover:bg-slate-800 w-1/2 py-2 mx-auto flex justify-center"
+                    className="rounded text-slate-100 bg-[var(--cor-primaria)] hover-bg-[var(--cor-primaria-hover)] cursor-pointer
+                                w-1/2 py-2 mx-auto flex justify-center"
                     type="submit"
                     disabled={carregandoDepartamento}>
                         

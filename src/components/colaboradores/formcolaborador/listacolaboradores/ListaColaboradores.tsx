@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
-import { buscar } from "../../../services/Service";
-import type Colaborador from "../../../models/Colaborador";
-import CardColaboradores from "../cardcolaboradores/CardColaboradores";
+import type Colaborador from "../../../../models/Colaborador";
+import { buscar } from "../../../../services/Service";
+import CardColaboradores from "../../cardcolaboradores/CardColaboradores";
 
 // Paleta de cores verde consistente com o dashboard
 const COLORS = {
