@@ -92,11 +92,11 @@ function FormColaborador() {
             <form className="w-1/2 flex flex-col gap-4" 
                 onSubmit={gerarNovaColaborador}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="nome">Nome do colaborador</label>
+                    <label htmlFor="nomeColaborador">Nome do colaborador</label>
                     <input
                         type="text"
                         placeholder="Colaborador"
-                        name='nome'
+                        name='nomeColaborador'
                         className="border-2 border-slate-700 rounded p-2"
                         value={colaborador.nomeColaborador}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -127,12 +127,12 @@ function FormColaborador() {
                 <div className="flex flex-col gap-2">
                     <label htmlFor="dataNascimento">Data de nascimento</label>
                     <input
-                        type="text"
-                        placeholder="Data de nascimento"
-                        name='dataNascimento'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={colaborador.dataNascimento}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    type="date"
+                    placeholder="Data de nascimento"
+                    name="dataNascimento"
+                    className="border-2 border-slate-700 rounded p-2"
+                    value={colaborador.dataNascimento}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <div className="flex flex-col gap-2">
