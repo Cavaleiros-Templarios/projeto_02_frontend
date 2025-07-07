@@ -19,8 +19,8 @@ function ListaDepartamentos() {
             
             setIsLoading(true)
 
-            await listar("/departamentos", setDepartamentos, {
-            })
+            await listar("/departamentos", setDepartamentos, 
+            )
 
         } catch (error: any) {
             if(error.toString().includes("401")){

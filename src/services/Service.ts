@@ -4,21 +4,21 @@ const api = axios.create({
     baseURL: "https://projeto02backend-production.up.railway.app/",
 })
 
-export const listar = async (url: string, setDados: Function, header: object) => {
-    const resposta = await api.get(url, header)
+export const listar = async (url: string, setDados: Function) => {
+    const resposta = await api.get(url)
     setDados(resposta.data)
 }
 
-export const cadastrar = async (url: string, dados: Object, setDados: Function, header: object) => {
-    const resposta = await api.post(url, dados, header)
+export const cadastrar = async (url: string, dados: Object, setDados: Function) => {
+    const resposta = await api.post(url, dados)
     setDados(resposta.data)
 }
 
-export const atualizar = async (url: string, dados: Object, setDados: Function, header: object) => {
-    const resposta = await api.put(url, dados, header)
+export const atualizar = async (url: string, dados: Object, setDados: Function) => {
+    const resposta = await api.put(url, dados)
     setDados(resposta.data)
 }
 
-export const deletar = async (url: string, header: object) => {
-    await api.delete(url, header)
+export const deletar = async (url: string) => {
+    await api.delete(url)
 }

@@ -17,9 +17,7 @@ function FormDepartamento() {
 
     async function buscarDepartamentoPorid(id: string){
         try {
-            await listar(`/departamentos/${id}`, setDepartamento, {
-
-            })
+            await listar(`/departamentos/${id}`, setDepartamento)
 
         } catch (error: any) {
             if(error.toString().includes("401")){
@@ -54,8 +52,8 @@ function FormDepartamento() {
         
         if (id !== undefined){
             try{
-                await atualizar("/departamentos", departamento, setDepartamento, {
-                })
+                await atualizar("/departamentos", departamento, setDepartamento, 
+                )
  
                 alert("O departamento foi atualizado com sucesso!")
             }catch(error: any){
@@ -64,8 +62,7 @@ function FormDepartamento() {
             }
         }else{
             try{
-                await cadastrar("/departamentos", departamento, setDepartamento, {
-                })
+                await cadastrar("/departamentos", departamento, setDepartamento, )
  
                 alert("A categoria foi cadastrada com sucesso!")
             }catch(error: any){
