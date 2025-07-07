@@ -92,11 +92,11 @@ function FormColaborador() {
             <form className="w-1/2 flex flex-col gap-4" 
                 onSubmit={gerarNovaColaborador}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="nome">Nome do colaborador</label>
+                    <label htmlFor="nomeColaborador">Nome do colaborador</label>
                     <input
                         type="text"
                         placeholder="Colaborador"
-                        name='nome'
+                        name='nomeColaborador'
                         className="border-2 border-slate-700 rounded p-2"
                         value={colaborador.nomeColaborador}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
