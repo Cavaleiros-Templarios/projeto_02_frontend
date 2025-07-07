@@ -38,7 +38,7 @@ function ListaColaboradores() {
                 <div className="container flex flex-col">
                     
                     <button
-                        className="mb-4 w-48 self-end bg-slate-700 text-white py-2 px-4 rounded hover:bg-slate-800"
+                        className="mb-4 w-48 self-end bg-[#015B46] text-white py-2 px-4 rounded hover:bg-[#003C2D]"
                         onClick={() => navigate("/cadastrarcolaborador")}
                     >
                         Cadastrar novo colaborador 
