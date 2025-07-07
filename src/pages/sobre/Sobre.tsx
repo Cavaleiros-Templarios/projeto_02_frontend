@@ -49,7 +49,7 @@ const Sobre: React.FC = () => {
       name: "Wesley Lima",
       role: "Developer",
       github: "https://github.com/Wezzlim",
-      linkedin: "https://linkedin.com/in/wesley--lima",
+      linkedin: "https://www.linkedin.com/in/wesleytecnologia/",
       avatar: "https://ik.imagekit.io/dmzx7is6a/FasGen/Desenvolvedores/wesley.jpg?updatedAt=1751557438143"
     },
     {
