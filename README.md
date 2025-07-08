@@ -1,69 +1,151 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🏢 Core Humans - Gestão de Departamentos
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém o projeto **Core Humans**, uma aplicação **Frontend** desenvolvida com **React + Tailwind CSS**, com o objetivo de simular a administração de departamentos em uma empresa. A interface moderna, limpa e intuitiva permite **monitorar equipes, orçamentos e desempenho** com facilidade.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Objetivos do Projeto
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Criar uma interface de **administração organizacional**
+- Exibir **indicadores de desempenho** da empresa
+- Listar e filtrar **departamentos ativos**
+- Monitorar **orçamento, utilização e equipe**
+- Estimular o uso de **componentes reutilizáveis** e boas práticas com React
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tecnologias Utilizadas
+
+### 💻 Frontend
+
+- React  
+- TypeScript  
+- Tailwind CSS  
+- JavaScript  
+- Vite  
+- VSCode  
+- Figma  
+
+### 🖥️ Backend & Dev Tools  
+
+- Java + Spring Framework  
+- MySQL  
+- JPA / Hibernate  
+- Git e GitHub  
+- Insomnia (testes de API)  
+- Swagger (documentação de API)
+
+---
+
+## 📂 Componentes Implementados
+
+### 🧭 Navbar
+
+- Links para **Departamentos**, **Colaboradores**, **Estatísticas** e **Sobre**
+- Ícone de usuário (login/perfil)
+- Totalmente responsiva
+
+📸 **Print da Navbar:**  
+> ![Navbar](https://github.com/user-attachments/assets/6fee8d7f-8880-4106-a2af-6c76dcbba0c3)
+
+---
+
+### 🏠 Página Inicial (Home)
+
+- Apresentação da solução
+- Visão geral da estrutura organizacional
+- Navegação para outras páginas
+
+📸 **Print da Página Inicial:**  
+> ![Página Home](https://github.com/user-attachments/assets/5471cd4c-6807-4e06-8120-cd7eab5bdb3d)
+
+---
+
+### 📊 Dashboard de Departamentos
+
+- **Departamentos ativos**
+- **Investimento total**
+- **Colaboradores totais**
+- **Orçamento médio por departamento**
+- **Cards dos departamentos** com equipe, orçamento, performance e utilização
+
+📸 **Print da Página de Departamentos:**  
+> ![Departamentos](https://github.com/user-attachments/assets/3c34e501-afb6-48be-b111-3a6ff65df6b9)
+
+---
+
+### 🧑‍🤝‍🧑 Página de Colaboradores
+
+- Listagem de colaboradores
+- Departamento vinculado
+- Função e status ativo/inativo
+
+📸 **Print da Página de Colaboradores:**  
+> ![Colaboradores](https://github.com/user-attachments/assets/f9d1bc76-b782-4132-856f-3e8f6611d1fd)
+
+---
+
+### 📈 Página de Estatísticas
+
+- Análises e métricas dos departamentos
+- Dados sobre performance, equipe, orçamento
+- Gráficos e indicadores visuais
+
+📸 **Print da Página de Estatísticas:**  
+> ![Estatísticas](https://github.com/user-attachments/assets/a62f57b6-aca2-427a-b055-7763eac5bb4c)
+
+---
+
+### 📖 Página Sobre
+
+- Informações institucionais sobre a plataforma
+- Missão, visão e objetivo do sistema
+- Apresentação da equipe
+
+📸 **Print da Página Sobre:**  
+> ![Sobre](https://github.com/user-attachments/assets/dc701282-080f-453c-b0e3-4669cd97629d)
+
+---
+
+### 📎 Footer
+
+- Contatos
+- Direitos autorais
+- Links úteis
+
+📸 **Print do Footer:**  
+> ![Footer](https://github.com/user-attachments/assets/0d8392ef-8be0-4834-a4fe-bcb5d7558d04)
+
+---
+
+## ▶️ Como rodar o projeto localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/Cavaleiros-Templarios/projeto_02_frontend.git
+
+# Acesse o diretório
+cd projeto_02_frontend
+
+# Instale as dependências
+yarn
+
+# Rode o projeto
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📬 Contato
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Desenvolvido por:
+
+- [**Wesley Lima**](https://github.com/Wezzlim)  
+- [**Alex Ikezili**](https://github.com/alexikezili)  
+- [**Gustavo Brassaroto Lira**](https://github.com/Brassaroto)  
+- [**Cristiano Forner**](https://github.com/cristianoforner)  
+- [**Fabricio Vicente Soares**](https://github.com/Fabriciovics)  
+- [**Pedro Henrique**](https://github.com/phccoelho)  
+- [**Thiago Tasseli**](https://github.com/tasselii)
